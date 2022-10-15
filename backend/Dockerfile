@@ -1,8 +1,8 @@
 FROM ubuntu:20.04
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python3-pip python3-dev
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install ssh
+RUN apt-get update -y
+RUN apt-get install -y python3-pip python3-dev
+RUN apt-get -y install ssh
 RUN mkdir -p /root/.ssh
 
 COPY ./ssh.key /root/.ssh/id_rsa

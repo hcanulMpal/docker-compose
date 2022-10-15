@@ -1,4 +1,6 @@
 FROM centos:7
+RUN yum clean all
+RUN sudo rm -r /var/cache/yum
 RUN yum -y update 
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
@@ -25,6 +27,7 @@ RUN mkdir -p /root/.ssh
 COPY ./ssh.key /root/.ssh/id_rsa
 RUN ssh-keyscan gitlab.com > /root/.ssh/known_hosts
 RUN chmod 600 /root/.ssh/id_rsa
+
 RUN git config --global user.email "proyectos.ayuntamiento.fcp@gmail.com"
 RUN git config --global user.name "hugo canul
 RUN mkdir -p ~/.config/code-server
