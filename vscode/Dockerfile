@@ -1,6 +1,6 @@
 FROM centos:7
 RUN yum clean all
-RUN sudo rm -r /var/cache/yum
+RUN rm -r /var/cache/yum
 RUN yum -y update 
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
