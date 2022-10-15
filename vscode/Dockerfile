@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:8
 RUN yum clean all
 RUN rm -r /var/cache/yum
 RUN yum -y update 
