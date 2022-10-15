@@ -1,0 +1,5 @@
+# Ignora archivos del sisitema Mac
+.DS_Store
+
+# Ignora carpeta Code
+/code
