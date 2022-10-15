@@ -11,6 +11,8 @@ fi
 chmod +x app.py
 
 if [ -z $(python -c 'import Flask') ];then
+    echo "Actualizando pip-python..."
+    pip install --upgrade pip
     echo "Desplegando librerias..."
     pip install -r requirements.txt
 else
