@@ -7,7 +7,7 @@ services:
     container_name: dbase
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: financiera
+      MYSQL_DATABASE: municipio
       MYSQL_USER: hugocanul
       MYSQL_PASSWORD: ha260182ha
     restart: always
@@ -43,7 +43,7 @@ services:
     depends_on: 
       - dbase
     volumes:
-      - ./code/backend:/root/api-rest
+      - ./code/backend:/root/backend
 
 
   vuejs:
@@ -55,18 +55,6 @@ services:
       - api
     volumes: 
       - ./code/frontend:/root/frontend
-
-
-  # vscode:
-  #   build: 
-  #     context: ./vscode
-  #   ports:
-  #     - 9004:8080
-  #   depends_on: 
-  #     - api
-  #     - vuejs
-  #   volumes: 
-  #     - ./code:/root/projects
 
 
 

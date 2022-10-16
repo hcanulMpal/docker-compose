@@ -2,7 +2,7 @@ FROM centos:7
 RUN yum -y update 
 
 RUN yum install -y curl git
-RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && yum install -y gcc-c++ make
+RUN curl -sL https://rpm.nodesource.com/setup_16.x | bash - && yum install -y gcc-c++ make
 RUN yum install -y nodejs
 RUN yum install openssh-clients
 

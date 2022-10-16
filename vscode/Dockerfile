@@ -1,10 +1,10 @@
-FROM centos:8
+FROM centos:7
 RUN yum clean all
 RUN rm -r /var/cache/yum
 RUN yum -y update 
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-RUN yum -y install yum-utils curl
+RUN yum -y install curl
 RUN yum-config-manager --enable remi-php74
 RUN yum update -y
 RUN yum install -y php php-cli php-mysqlnd php-zip php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-xdebug php-soap

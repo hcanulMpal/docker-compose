@@ -11,4 +11,4 @@ if [ ! -d "node_modules" ];then
     echo "Instalar librerias Javscript"
     npm i
 fi
-npm run dev
+npm run serve

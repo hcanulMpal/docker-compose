@@ -1,22 +1,21 @@
 #!/bin/bash
-
 if [ $(ls | wc -l) -eq 0 ];then 
     echo "Clonando repositorio"
     cd ..
-    rm -rf api-rest/
+    rm -rf backen/
     git clone git@gitlab.com:paginaprincipal1/backend.git
-    cd api-rest
+    cd backend
 fi
 
 chmod +x app.py
 
-if [ -z $(python -c 'import Flask') ];then
+if [ -z $(python3 -c 'import Flask') ];then
     echo "Actualizando pip-python..."
-    pip install --upgrade pip
+    pip3 install --upgrade pip
     echo "Desplegando librerias..."
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 else
     echo "Librerias Flask"
 fi
 
-python app.py
+python3 app.py
