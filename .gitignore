@@ -3,3 +3,6 @@
 
 # Ignora carpeta Code
 /code
+
+# Se Ignoran las tablas porque se recrean
+/dbdata/
