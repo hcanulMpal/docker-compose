@@ -1,5 +1,7 @@
 # Ignora archivos del sisitema Mac
 .DS_Store
+/frontend/.DS_Store
+/backend/DS_Store
 
 # Ignora carpeta Code
 /code
