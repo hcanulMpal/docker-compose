@@ -3,7 +3,7 @@ if [ $(ls | wc -l) -eq 0 ];then
     echo "Clonando repositorio"
     cd ..
     rm -rf backen/
-    git clone git@gitlab.com:paginaprincipal1/backend.git
+    git clone https://github.com/hcanulMpal/backend.git
     cd backend
 fi
 
